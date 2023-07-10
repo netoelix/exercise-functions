@@ -40,7 +40,7 @@ const getLongestWord = (array) => {
 }
 // Requisito 5 - Crie a função countHighestNumberMaxOccurrences
 const countHighestNumberMaxOccurrences = (array) => {
-  let highestNumber = Infinity;
+  let highestNumber = array[0];
   let countNumber = 0;
 
   for (let index = 0; index < array.length; index += 1) {
@@ -54,6 +54,7 @@ const countHighestNumberMaxOccurrences = (array) => {
 
   return countNumber;
 }
+console.log(countHighestNumberMaxOccurrences([1, 9, 2, 3, 9, 5, 7]));
 // Não modifique as linhas abaixo
 module.exports = {
   verifyPalindrome: typeof verifyPalindrome === 'function' ? verifyPalindrome : (() => {}),
