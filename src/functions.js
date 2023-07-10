@@ -11,7 +11,7 @@ const verifyPalindrome = (string) => {
 const getHighestIndex = (array) => {
   let highestIndex = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (highestIndex < array[index]) {
+    if (array[index] < array[highestIndex]) {
       highestIndex = index;
     }
   }
@@ -19,13 +19,13 @@ const getHighestIndex = (array) => {
 }
 // Requisito 3 - Crie a função getSmallestIndex
 const getSmallestIndex = (array) => {
-  let smallesttIndex = 0;
+  let smallestIndex = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (smallesttIndex > array[index]) {
-      smallesttIndex = index;
+    if (array[index] < array[smallestIndex]) {
+      smallestIndex = index;
     }
   }
-  return smallesttIndex;
+  return smallestIndex;
 }
 // Requisito 4 - Crie a função getLongestWord
 const getLongestWord = (array) => {
@@ -40,7 +40,7 @@ const getLongestWord = (array) => {
 }
 // Requisito 5 - Crie a função countHighestNumberMaxOccurrences
 const countHighestNumberMaxOccurrences = (array) => {
-  let highestNumber = 0;
+  let highestNumber = Infinity;
   let countNumber = 0;
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] > highestNumber) {
