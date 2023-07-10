@@ -11,12 +11,12 @@ const verifyPalindrome = (string) => {
 const getHighestIndex = (array) => {
   let highestIndex = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] < array[highestIndex]) {
+    if (array[index] > array[highestIndex]) {
       highestIndex = index;
     }
   }
   return highestIndex;
-}
+};
 // Requisito 3 - Crie a função getSmallestIndex
 const getSmallestIndex = (array) => {
   let smallestIndex = 0;
@@ -40,20 +40,20 @@ const getLongestWord = (array) => {
 }
 // Requisito 5 - Crie a função countHighestNumberMaxOccurrences
 const countHighestNumberMaxOccurrences = (array) => {
-  let highestNumber = Infinity;
+  let highestNumber = 0;
   let countNumber = 0;
+
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] > highestNumber) {
       highestNumber = array[index];
-    }
-  }
-  for (let index = 0; index < array.length; index += 1) {
-    if (array[index] === highestNumber) {
+      countNumber = 1;
+    } else if (array[index] === highestNumber) {
       countNumber += 1;
     }
   }
+
   return countNumber;
-}
+};
 // Não modifique as linhas abaixo
 module.exports = {
   verifyPalindrome: typeof verifyPalindrome === 'function' ? verifyPalindrome : (() => {}),
