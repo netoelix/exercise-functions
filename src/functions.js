@@ -35,7 +35,7 @@ const getLongestWord = (array) => {
   let biggestWord = '';
   for (let index = 0; index < array.length; index += 1) {
     let word = array[index];
-    if ( word.length > biggestWord.length) {
+    if (word.length > biggestWord.length) {
       biggestWord = word;
     }
   }
