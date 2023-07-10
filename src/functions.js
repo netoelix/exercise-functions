@@ -10,7 +10,6 @@ const getHighestIndex = (array) => {
   }
   return highestIndex;
 };
-console.log(getHighestIndex([1, 2, 3, 4, 5]));
 // Requisito 3 - Crie a função getSmallestIndex
 const getSmallestIndex = (array) => {
   let smallesttIndex = 0;
@@ -21,7 +20,6 @@ const getSmallestIndex = (array) => {
   }
   return smallesttIndex;
 };
-console.log(getSmallestIndex([-1, 2, -3, 4, 5]));
 // Requisito 4 - Crie a função getLongestWord
 
 // Requisito 5 - Crie a função countHighestNumberMaxOccurrences
@@ -40,7 +38,6 @@ const countHighestNumberMaxOccurrences = (array) => {
   }
   return countNumber;
 };
-console.log(countHighestNumberMaxOccurrences([1, 5, 9, 5, 9, 2]));
 
 // Não modifique as linhas abaixo
 module.exports = {
