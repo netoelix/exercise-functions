@@ -1,5 +1,13 @@
 // Requisito 1 - Crie a função verifyPalindrome
-
+const verifyPalindrome = (string) => {
+  string = string.toLowerCase();
+  if (string === string.split('').reverse().join('')) {
+    return true;
+  } else {
+    return false;
+  }
+}
+//console.log(verifyPalindrome('anab'));
 // Requisito 2 - Crie a função getHighestIndex
 const getHighestIndex = (array) => {
   let highestIndex = 0;
@@ -10,6 +18,7 @@ const getHighestIndex = (array) => {
   }
   return highestIndex;
 };
+//console.log(getHighestIndex([1, 5, 6, 7, 9, 15]));
 // Requisito 3 - Crie a função getSmallestIndex
 const getSmallestIndex = (array) => {
   let smallesttIndex = 0;
@@ -20,8 +29,19 @@ const getSmallestIndex = (array) => {
   }
   return smallesttIndex;
 };
+//console.log(getSmallestIndex([1, 5, -1, -5, 10]));
 // Requisito 4 - Crie a função getLongestWord
-
+const getLongestWord = (array) => {
+  let biggestWord = '';
+  for (let index = 0; index < array.length; index += 1) {
+    let word = array[index];
+    if ( word.length > biggestWord.length) {
+      biggestWord = word;
+    }
+  }
+  return biggestWord;
+}
+//console.log(getLongestWord(['cachorro', 'banana', 'paralelepipedo', 'abc']));
 // Requisito 5 - Crie a função countHighestNumberMaxOccurrences
 const countHighestNumberMaxOccurrences = (array) => {
   let highestNumber = 0;
@@ -38,7 +58,7 @@ const countHighestNumberMaxOccurrences = (array) => {
   }
   return countNumber;
 };
-
+//console.log(countHighestNumberMaxOccurrences([9, 5, 5, 5, 5]));
 // Não modifique as linhas abaixo
 module.exports = {
   verifyPalindrome: typeof verifyPalindrome === 'function' ? verifyPalindrome : (() => {}),
