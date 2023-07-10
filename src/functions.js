@@ -54,7 +54,6 @@ const countHighestNumberMaxOccurrences = (array) => {
 
   return countNumber;
 }
-console.log(countHighestNumberMaxOccurrences([1, 5, 6, 5, 6, 1, 2, 3]));
 // Não modifique as linhas abaixo
 module.exports = {
   verifyPalindrome: typeof verifyPalindrome === 'function' ? verifyPalindrome : (() => {}),
