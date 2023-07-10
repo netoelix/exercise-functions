@@ -1,26 +1,27 @@
 // Requisito 1 - Crie a função verifyPalindrome
 
 // Requisito 2 - Crie a função getHighestIndex
-function getHighestIndex(array) {
-  let highestValue;
-  for (let index = 0; index < array.length; index += 1) {
-    if (highestValue > array[index]) {
-      highestValue = index;
+const getHighestIndex = (array) => {
+  let highestIndex = 0;
+  for (let index = 1; index < array.length; index += 1) {
+    if (highestIndex < array[index]) {
+      highestIndex = index;
     }
   }
-  return highestValue;
-}
-console.log(getHighestIndex());
+  return highestIndex;
+};
+console.log(getHighestIndex([1, 2, 3, 4, 5]));
 // Requisito 3 - Crie a função getSmallestIndex
-function getSmallestIndex(array) {
-  let smallesttValue;
+const getSmallestIndex = (array) => {
+  let smallesttIndex = 0;
   for (let index = 0; index < array.length; index += 1) {
-    if (smallesttValue < array[index]) {
-      smallesttValue = index;
+    if (smallesttIndex > array[index]) {
+      smallesttIndex = index;
     }
   }
-  return smallesttValue;
-}
+  return smallesttIndex;
+};
+console.log(getSmallestIndex([-1, 2, -3, 4, 5]));
 // Requisito 4 - Crie a função getLongestWord
 
 // Requisito 5 - Crie a função countHighestNumberMaxOccurrences
