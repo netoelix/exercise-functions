@@ -2,17 +2,25 @@
 
 // Requisito 2 - Crie a função getHighestIndex
 function getHighestIndex(array) {
-  let highestValue = 0;
+  let highestValue;
   for (let index = 0; index < array.length; index += 1) {
     if (highestValue > array[index]) {
       highestValue = index;
     }
   }
-    return highestValue;
+  return highestValue;
 }
 console.log(getHighestIndex());
 // Requisito 3 - Crie a função getSmallestIndex
-
+function getSmallestIndex(array) {
+  let smallesttValue;
+  for (let index = 0; index < array.length; index += 1) {
+    if (smallesttValue < array[index]) {
+      smallesttValue = index;
+    }
+  }
+  return smallesttValue;
+}
 // Requisito 4 - Crie a função getLongestWord
 
 // Requisito 5 - Crie a função countHighestNumberMaxOccurrences
