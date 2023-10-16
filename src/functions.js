@@ -55,7 +55,7 @@ const countHighestNumberMaxOccurrences = (array) => {
   return countNumber;
 }
 console.log(countHighestNumberMaxOccurrences([1, 9, 2, 3, 9, 5, 7]));
-// Não modifique as linhas abaixo
+// Não modifique as linhas abaixo (codigo desenvolvido pela Trybe)
 module.exports = {
   verifyPalindrome: typeof verifyPalindrome === 'function' ? verifyPalindrome : (() => {}),
   getHighestIndex: typeof getHighestIndex === 'function' ? getHighestIndex : (() => {}),
